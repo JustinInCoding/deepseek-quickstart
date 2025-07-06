@@ -112,7 +112,7 @@ async def get_forecast(latitude: float, longitude: float) -> str:
     periods = forecast_data["properties"]["periods"]
     forecasts = []
     # 遍历接下来的5个预报周期（例如：今天下午、今晚、明天...）
-    for period in periods[:5]:
+    for period in periods:
         forecast = f"""
 {period['name']}:
 温度: {period['temperature']}°{period['temperatureUnit']}
